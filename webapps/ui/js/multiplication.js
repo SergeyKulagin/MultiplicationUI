@@ -3,7 +3,7 @@ $(document).ready(function () {
 
     function getMultiplication() {
         $.ajax({
-            url: "/multiplications/random",
+            url: MULTIPLICATION_URL + "/multiplications/random",
         }).then(
             function (data) {
                 currentMultiplication = data;
@@ -15,7 +15,7 @@ $(document).ready(function () {
 
     function sendMultiplicationResult() {
         return $.ajax({
-            url: "/results",
+            url: MULTIPLICATION_URL + "/results",
             type: "POST",
             contentType: "application/json; charset=utf-8",
             data: JSON.stringify({
@@ -37,7 +37,7 @@ $(document).ready(function () {
 
     function getLastResults() {
         $.ajax({
-            url: "/results/",
+            url: MULTIPLICATION_URL + "/results/",
             data: {
                 "alias" : $("#user-nickname").val()
             }

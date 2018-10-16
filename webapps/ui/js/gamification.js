@@ -1,6 +1,6 @@
 $(document).ready(function () {
     function getLeaders() {
-        $.get("/leaders")
+        $.get(GAMIFICATION_URL + "/leaders")
             .then(function (data) {
                 var leadersUI =
                     "{{#.}}<div>" +
