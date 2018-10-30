@@ -7,7 +7,7 @@ $(document).ready(function () {
                     "<div>{{userId}}</div>" +
                     "<div>{{totalScore}}</div>" +
                     "</div>{{/.}}";
-                $("#leader-board").html(leadersUI);
+                $("#leader-board").html(Mustache.to_html(leadersUI, data));
             })
         
     }
