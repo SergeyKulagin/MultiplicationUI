@@ -3,7 +3,7 @@ $(document).ready(function () {
 
     function getMultiplication() {
         $.ajax({
-            url: MULTIPLICATION_URL + "/multiplications/random",
+            url: MULTIPLICATION_URL + "/multiplications/random"
         }).then(
             function (data) {
                 currentMultiplication = data;
@@ -67,4 +67,4 @@ $(document).ready(function () {
         });
         getMultiplication();
     })
-})
+});
