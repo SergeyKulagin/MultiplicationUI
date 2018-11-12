@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
     <meta charset="UTF-8">
     <title>Social multiplication</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="http://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.0/mustache.js"></script>
     <script src="js/constants.js"></script>
@@ -11,33 +10,42 @@
     <script src="js/multiplication.js"></script>
 </head>
 <body>
-
 <!--attempt UI-->
-<div>
-    <h2>
-        <span id="multiplication-1"></span>
-        <span>X</span>
-        <span id="multiplication-2"></span>
-        <span>=</span>
-    </h2>
-    <input id="result-input"/>
-    <input id="check-button" value="Check" type="button"/>
-    <div/>
-    User nickname: <input id="user-nickname">
-    <h2 id="attempt-result-message"></h2>
-    <div/>
+<div class="container">
+    <div class="form-group">
+        <h3>
+            <span id="multiplication-1"></span>
+            <span>X</span>
+            <span id="multiplication-2"></span>
+            <span>=</span>
+        </h3>
+        <div>
+            <input id="result-input" class="form-control"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <h3>User nickname:</h3>
+        <input id="user-nickname" class="form-control">
+    </div>
+    <input id="check-button" value="Check" type="button" class="btn btn-primary"/>
+    <h3 id="attempt-result-message"/>
 </div>
-
  <!--last attempts-->
-<div>
-    <table id="attempt-results">
+<div class="container">
+    <table id="attempt-results" class="table">
     </table>
 </div>
 
 <!--leaders-->
-<div>
-    <div id="leader-board">
-    </div>
+<div class="container">
+    <table id="leader-board" class="table">
+        <thead id="leader-board-head">
+            <tr>
+                <th>User id</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+    </table>
 </div>
 
 </body>
