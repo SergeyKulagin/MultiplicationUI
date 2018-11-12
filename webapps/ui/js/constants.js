@@ -1,2 +1,2 @@
-MULTIPLICATION_URL = "http://localhost:8097";
-GAMIFICATION_URL = "http://localhost:8099";
+MULTIPLICATION_URL = "http://localhost:8000/api";
+GAMIFICATION_URL = "http://localhost:8000/api";
