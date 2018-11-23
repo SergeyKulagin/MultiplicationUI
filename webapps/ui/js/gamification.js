@@ -1,4 +1,5 @@
-$(document).ready(function () {
+$(document).on("authenticated", function () {
+    
     function getLeaders() {
         $.get(GAMIFICATION_URL + "/leaders")
             .then(function (data) {
